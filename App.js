@@ -29,11 +29,11 @@ function Welcome({navigation}) {
     <View style={styles.welcomeContainer}>
       <ImageBackground
         style={styles.image}
-        source={require('../argo/src/assets/BG.png')}
+        source={require('../argon-main/src/assets/BG.png')}
         resizeMode="cover">
         <View style={styles.content}>
           <Image
-            source={require('../argo/src/assets/LOGO.png')}
+            source={require('../argon-main/src/assets/LOGO.png')}
             height={20}
             width={20}
             style={{position: 'relative', top: 1}}

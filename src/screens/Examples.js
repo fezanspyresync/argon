@@ -7,6 +7,7 @@ import {
   Pressable,
   Alert,
   TextInput,
+  KeyboardAvoidingView,
 } from 'react-native';
 import React from 'react';
 import CustomNav from '../components/CustomNav';
@@ -91,147 +92,157 @@ export default function Examples() {
   };
 
   return (
-    <View style={{flex: 1}}>
-      <ImageBackground
-        source={require('../assets/createAccount.png')}
-        resizeMode="cover"
-        style={{flex: 1}}>
-        <Container>
-          <CustomNav currentScreeb={routing.name} />
-        </Container>
-        <View
-          style={{
-            flex: 1,
-            padding: widthPercentageToDP('4%'),
-          }}>
+    <KeyboardAvoidingView style={{flex: 1}}>
+      <View style={{flex: 1}}>
+        <ImageBackground
+          source={require('../assets/createAccount.png')}
+          resizeMode="cover"
+          style={{flex: 1}}>
+          <Container>
+            <CustomNav currentScreeb={routing.name} />
+          </Container>
           <View
             style={{
               flex: 1,
-              backgroundColor: '#F4F5F7',
-              borderRadius: 5,
-              overflow: 'hidden',
+              padding: widthPercentageToDP('4%'),
             }}>
             <View
               style={{
-                height: heightPercentageToDP('20%'),
-                backgroundColor: 'white',
-                paddingHorizontal: widthPercentageToDP('6%'),
-                paddingVertical: heightPercentageToDP('5%'),
-              }}>
-              <Text style={{textAlign: 'center'}}>Sign up with</Text>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'space-around',
-                  alignItems: 'center',
-                  paddingVertical: widthPercentageToDP(3),
-                  marginTop: heightPercentageToDP('.4%'),
-                  overflow: 'hidden',
-                }}>
-                <Card
-                  style={{height: heightPercentageToDP('5.5%'), width: '45%'}}>
-                  <Pressable
-                    onPress={() => facebookHandler()}
-                    style={{
-                      flexDirection: 'row',
-                      paddingVertical: 10,
-                      paddingHorizontal: 20,
-                      justifyContent: 'space-between',
-                    }}>
-                    <View style={{height: 20, width: 20}}>
-                      <Image
-                        source={require('../assets/facebook.png')}
-                        style={{
-                          height: '100%',
-                          width: '100%',
-                          resizeMode: 'cover',
-                        }}
-                      />
-                    </View>
-                    <Text style={{color: '#5E72E4', fontSize: 14}}>
-                      FACEBOOK
-                    </Text>
-                  </Pressable>
-                </Card>
-                <Card
-                  style={{height: heightPercentageToDP('5.5%'), width: '45%'}}>
-                  <Pressable
-                    onPress={googleHandler}
-                    style={{
-                      flexDirection: 'row',
-                      paddingVertical: 10,
-                      paddingHorizontal: 28,
-                      justifyContent: 'space-between',
-                    }}>
-                    <View style={{height: 20, width: 20}}>
-                      <Image
-                        source={require('../assets/googleicon.png')}
-                        style={{
-                          height: '100%',
-                          width: '100%',
-                          resizeMode: 'cover',
-                        }}
-                      />
-                    </View>
-                    <Text style={{color: '#5E72E4', fontSize: 14}}>GOOGLE</Text>
-                  </Pressable>
-                </Card>
-              </View>
-            </View>
-            <View
-              style={{
                 flex: 1,
-                paddingHorizontal: widthPercentageToDP('9.4%'),
-                paddingVertical: heightPercentageToDP('5%'),
+                backgroundColor: '#F4F5F7',
+                borderRadius: 5,
+                overflow: 'hidden',
               }}>
               <View
                 style={{
-                  marginBottom: heightPercentageToDP('5%'),
+                  height: heightPercentageToDP('20%'),
+                  backgroundColor: 'white',
+                  paddingHorizontal: widthPercentageToDP('6%'),
+                  paddingVertical: heightPercentageToDP('5%'),
                 }}>
-                <Text
+                <Text style={{textAlign: 'center'}}>Sign up with</Text>
+                <View
                   style={{
-                    textAlign: 'center',
-                  }}>
-                  Or sign up with credentials
-                </Text>
-              </View>
-              <CustomInput
-                placeholder={'Name'}
-                logo={require('../assets/Object.png')}
-              />
-              <CustomInput
-                placeholder={'Email'}
-                logo={require('../assets/email.png')}
-              />
-              <CustomInput
-                isPassword={'password'}
-                placeholder={'Password'}
-                logo={require('../assets/lock.png')}
-              />
-              <Text>
-                password strenght:
-                <Text style={{fontWeight: 'bold', color: '#2DCE89'}}>
-                  Strong
-                </Text>
-              </Text>
-              <CustomCheckBox />
-              <View style={{alignItems: 'center', marginTop: 10}}>
-                <TouchableOpacity
-                  style={{
-                    height: heightPercentageToDP('7%'),
-                    backgroundColor: '#5E72E4',
-                    width: '70%',
+                    flexDirection: 'row',
+                    justifyContent: 'space-around',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: 5,
+                    paddingVertical: widthPercentageToDP(3),
+                    marginTop: heightPercentageToDP('.4%'),
+                    overflow: 'hidden',
                   }}>
-                  <Text style={{color: 'white'}}>CREATE ACCOUNT</Text>
-                </TouchableOpacity>
+                  <Card
+                    style={{
+                      height: heightPercentageToDP('5.5%'),
+                      width: '45%',
+                    }}>
+                    <Pressable
+                      onPress={() => facebookHandler()}
+                      style={{
+                        flexDirection: 'row',
+                        paddingVertical: 10,
+                        paddingHorizontal: 20,
+                        justifyContent: 'space-between',
+                      }}>
+                      <View style={{height: 20, width: 20}}>
+                        <Image
+                          source={require('../assets/facebook.png')}
+                          style={{
+                            height: '100%',
+                            width: '100%',
+                            resizeMode: 'cover',
+                          }}
+                        />
+                      </View>
+                      <Text style={{color: '#5E72E4', fontSize: 14}}>
+                        FACEBOOK
+                      </Text>
+                    </Pressable>
+                  </Card>
+                  <Card
+                    style={{
+                      height: heightPercentageToDP('5.5%'),
+                      width: '45%',
+                    }}>
+                    <Pressable
+                      onPress={googleHandler}
+                      style={{
+                        flexDirection: 'row',
+                        paddingVertical: 10,
+                        paddingHorizontal: 28,
+                        justifyContent: 'space-between',
+                      }}>
+                      <View style={{height: 20, width: 20}}>
+                        <Image
+                          source={require('../assets/googleicon.png')}
+                          style={{
+                            height: '100%',
+                            width: '100%',
+                            resizeMode: 'cover',
+                          }}
+                        />
+                      </View>
+                      <Text style={{color: '#5E72E4', fontSize: 14}}>
+                        GOOGLE
+                      </Text>
+                    </Pressable>
+                  </Card>
+                </View>
+              </View>
+              <View
+                style={{
+                  flex: 1,
+                  paddingHorizontal: widthPercentageToDP('9.4%'),
+                  paddingVertical: heightPercentageToDP('5%'),
+                }}>
+                <View
+                  style={{
+                    marginBottom: heightPercentageToDP('5%'),
+                  }}>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                    }}>
+                    Or sign up with credentials
+                  </Text>
+                </View>
+                <CustomInput
+                  placeholder={'Name'}
+                  logo={require('../assets/Object.png')}
+                />
+                <CustomInput
+                  placeholder={'Email'}
+                  logo={require('../assets/email.png')}
+                />
+                <CustomInput
+                  isPassword={'password'}
+                  placeholder={'Password'}
+                  logo={require('../assets/lock.png')}
+                />
+                <Text>
+                  password strenght:
+                  <Text style={{fontWeight: 'bold', color: '#2DCE89'}}>
+                    Strong
+                  </Text>
+                </Text>
+                <CustomCheckBox />
+                <View style={{alignItems: 'center', marginTop: 10}}>
+                  <TouchableOpacity
+                    style={{
+                      height: heightPercentageToDP('7%'),
+                      backgroundColor: '#5E72E4',
+                      width: '70%',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: 5,
+                    }}>
+                    <Text style={{color: 'white'}}>CREATE ACCOUNT</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
           </View>
-        </View>
-      </ImageBackground>
-    </View>
+        </ImageBackground>
+      </View>
+    </KeyboardAvoidingView>
   );
 }

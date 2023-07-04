@@ -4,7 +4,6 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useNavigation} from '@react-navigation/native';
 
 export default function CustomNav({currentScreeb = 'mydata'}) {
@@ -32,7 +31,12 @@ export default function CustomNav({currentScreeb = 'mydata'}) {
           {/* <MaterialCommunityIcons name="menu" size={40} color="blue" /> */}
           <Image
             source={require('../assets/Menu.png')}
-            style={{height: '100%', width: '100%', resizeMode: 'cover'}}
+            style={{
+              height: '100%',
+              width: '100%',
+              resizeMode: 'cover',
+              backgroundColor: 'white',
+            }}
           />
         </TouchableOpacity>
 
