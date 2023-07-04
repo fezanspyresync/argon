@@ -15,6 +15,8 @@ import {
 } from 'react-native-responsive-screen';
 import CustomButton from './src/components/button';
 import {MyDrawer} from './src/navigator/drawer';
+import {NativeBaseProvider, Box} from 'native-base';
+import {SSRProvider} from '@react-aria/ssr';
 
 const Stack = createStackNavigator();
 
@@ -55,24 +57,28 @@ function Welcome({navigation}) {
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="welcome"
-          component={Welcome}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="myDrawer"
-          component={MyDrawer}
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SSRProvider>
+      <NativeBaseProvider>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="welcome"
+              component={Welcome}
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="myDrawer"
+              component={MyDrawer}
+              options={{
+                headerShown: false,
+              }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </NativeBaseProvider>
+    </SSRProvider>
   );
 }
 

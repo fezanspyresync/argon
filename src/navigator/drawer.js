@@ -31,7 +31,7 @@ export function MyDrawer() {
         }}
       />
       <Drawer.Screen
-        name="Examples"
+        name="Create account"
         component={Examples}
         options={{
           drawerIcon: ({focused, color, size}) => (

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1074496300706",
+    "project_id": "argon-85127",
+    "storage_bucket": "argon-85127.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074496300706:android:a0460122a583800e81d9fb",
+        "android_client_info": {
+          "package_name": "com.argo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074496300706-dh9l8r36bjsdjfitqo00i60qpovim338.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.argo",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "1074496300706-9t7b824c0ajbeajlju01p9jeu3khmo0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdCI8KXPJhXMy5FjQ-Q63Bk1q3p0uq00M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074496300706-9t7b824c0ajbeajlju01p9jeu3khmo0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

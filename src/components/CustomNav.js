@@ -19,17 +19,15 @@ export default function CustomNav({currentScreeb = 'mydata'}) {
       <View
         style={{
           height: '100%',
-
           flex: 1,
           alignItems: 'center',
           flexDirection: 'row',
-          justifyContent: 'space-between',
         }}>
         <TouchableOpacity
           onPress={DrawerOpenHandler}
           style={{
-            height: '35%',
-            width: '17%',
+            height: 20,
+            width: 30,
           }}>
           {/* <MaterialCommunityIcons name="menu" size={40} color="blue" /> */}
           <Image
@@ -38,7 +36,7 @@ export default function CustomNav({currentScreeb = 'mydata'}) {
           />
         </TouchableOpacity>
 
-        <Text style={{position: 'relative', right: 25}}>{currentScreeb} </Text>
+        <Text style={{marginLeft: 30, color: 'white'}}>{currentScreeb} </Text>
       </View>
       <View
         style={{
